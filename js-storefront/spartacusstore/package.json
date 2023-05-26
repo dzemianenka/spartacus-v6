@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+
+    "dev:ssr": "ng run spartacusstore:serve-ssr",
+    "serve:ssr": "node dist/spartacusstore/server/main.js",
+    "build:ssr": "ng build && ng run spartacusstore:server",
+    "prerender": "ng run spartacusstore:prerender"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +27,7 @@
     "@fontsource/open-sans": "^4.5.14",
     "@fortawesome/fontawesome-free": "5.8.1",
     "@ng-select/ng-select": "^10.0.3",
+    "@nguniversal/express-engine": "^15.2.1",
     "@ngrx/effects": "^15.3.0",
     "@ngrx/router-store": "^15.3.0",
     "@ngrx/store": "^15.3.0",

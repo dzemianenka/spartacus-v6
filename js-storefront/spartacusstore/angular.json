@@ -133,6 +133,39 @@
               ]
             }
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "spartacusstore:build:development",
+              "serverTarget": "spartacusstore:server:development"
+            },
+            "production": {
+              "browserTarget": "spartacusstore:build:production",
+              "serverTarget": "spartacusstore:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "spartacusstore:build:production",
+              "serverTarget": "spartacusstore:server:production"
+            },
+            "development": {
+              "browserTarget": "spartacusstore:build:development",
+              "serverTarget": "spartacusstore:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

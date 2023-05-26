@@ -131,8 +131,42 @@
               ]
             }
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "b2bspastore:build:development",
+              "serverTarget": "b2bspastore:server:development"
+            },
+            "production": {
+              "browserTarget": "b2bspastore:build:production",
+              "serverTarget": "b2bspastore:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "b2bspastore:build:production",
+              "serverTarget": "b2bspastore:server:production"
+            },
+            "development": {
+              "browserTarget": "b2bspastore:build:development",
+              "serverTarget": "b2bspastore:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
-  }
+  },
+  "defaultProject": "b2bspastore"
 }
