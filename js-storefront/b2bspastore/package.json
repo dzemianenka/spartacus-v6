@@ -42,6 +42,7 @@
     "@spartacus/storefinder": "~6.0.0",
     "@spartacus/storefront": "~6.0.0",
     "@spartacus/styles": "~6.0.0",
+    "@spartacus/setup": "~6.0.0",
     "@spartacus/tracking": "~6.0.0",
     "@spartacus/user": "~6.0.0",
     "angular-oauth2-oidc": "^15.0.1",
